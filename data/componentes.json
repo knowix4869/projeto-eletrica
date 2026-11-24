@@ -1,0 +1,82 @@
+[
+  {
+    "id": "tensao", "nome": "Tensão elétrica", "icone": "⚡", "categoria": "Elétrica básica", "nivel": "Iniciante",
+    "resumo": "Diferença de potencial elétrico entre dois pontos, medida em volts (V).",
+    "o_que_e": "É a diferença de potencial elétrico entre dois pontos. Pode ser entendida como a condição que impulsiona a movimentação de cargas em um circuito.",
+    "para_que_serve": "É uma das grandezas fundamentais para especificar fontes, tomadas, equipamentos, motores e componentes.",
+    "como_funciona": "Uma fonte estabelece uma diferença de potencial entre seus terminais. Quando existe um caminho condutor fechado, pode circular corrente, dependendo também da impedância do circuito.",
+    "onde_utilizado": "Em praticamente todos os sistemas elétricos e eletrônicos: instalações residenciais, máquinas, fontes e automação.",
+    "exemplo": "Uma tomada identificada como 127 V fornece uma diferença de potencial nominal de 127 volts entre os pontos indicados do circuito.",
+    "cuidados": "Não confunda tensão com corrente. A tensão presente em uma instalação pode causar choque grave ou fatal. Não faça medições em partes energizadas sem capacitação, instrumento adequado e procedimento seguro."
+  },
+  {
+    "id": "corrente", "nome": "Corrente elétrica", "icone": "〰️", "categoria": "Elétrica básica", "nivel": "Iniciante",
+    "resumo": "Movimento ordenado de cargas elétricas, medido em ampères (A).",
+    "o_que_e": "É a taxa de fluxo de carga elétrica através de uma seção de um condutor.",
+    "para_que_serve": "Permite dimensionar condutores, proteções e equipamentos de acordo com a corrente que cada circuito exige.",
+    "como_funciona": "Quando existe tensão aplicada e um caminho fechado, as cargas se movimentam. A corrente depende da tensão e das características do circuito.",
+    "onde_utilizado": "Em circuitos de iluminação, tomadas, motores, painéis e equipamentos eletrônicos.",
+    "exemplo": "Um equipamento que consome 5 A exige que o circuito e suas proteções sejam compatíveis com essa corrente e com as condições de instalação.",
+    "cuidados": "Corrente excessiva pode aquecer condutores e provocar incêndios. O dimensionamento deve considerar método de instalação, temperatura, agrupamento e normas aplicáveis."
+  },
+  {
+    "id": "resistencia", "nome": "Resistência elétrica", "icone": "🔧", "categoria": "Elétrica básica", "nivel": "Iniciante",
+    "resumo": "Oposição que um material oferece à passagem da corrente, medida em ohms (Ω).",
+    "o_que_e": "É a propriedade que relaciona a tensão aplicada e a corrente em um elemento, no caso de comportamento resistivo.",
+    "para_que_serve": "É importante no cálculo de circuitos, aquecimento, limitação de corrente e seleção de resistores.",
+    "como_funciona": "Em um resistor ôhmico ideal, a relação entre tensão e corrente segue a Lei de Ohm: V = R × I.",
+    "onde_utilizado": "Resistores eletrônicos, elementos de aquecimento e modelos de circuitos.",
+    "exemplo": "Se um resistor de 10 Ω recebe 2 A, a tensão em seus terminais é 20 V, considerando o modelo ôhmico.",
+    "cuidados": "Resistores dissipam potência em forma de calor. Verifique potência nominal, temperatura e condições de montagem."
+  },
+  {
+    "id": "disjuntor", "nome": "Disjuntor termomagnético", "icone": "🛡️", "categoria": "Proteção elétrica", "nivel": "Iniciante",
+    "resumo": "Dispositivo que interrompe automaticamente o circuito quando detecta sobrecorrente dentro de suas características.",
+    "o_que_e": "É um dispositivo de proteção que combina, nos modelos termomagnéticos, atuação térmica para sobrecargas e magnética para correntes elevadas de curto-circuito.",
+    "para_que_serve": "Protege os condutores e circuitos contra efeitos de sobrecorrentes, quando corretamente especificado e instalado.",
+    "como_funciona": "O mecanismo térmico responde ao aquecimento provocado por sobrecarga. O mecanismo magnético atua rapidamente diante de correntes muito elevadas, como em curtos-circuitos.",
+    "onde_utilizado": "Quadros de distribuição residenciais, comerciais e industriais, além de circuitos de máquinas.",
+    "exemplo": "Um circuito de iluminação pode possuir um disjuntor dimensionado conforme a seção dos cabos, método de instalação, carga e requisitos normativos.",
+    "cuidados": "A corrente nominal não deve ser escolhida apenas pela corrente medida. É necessário coordenar proteção e condutores, verificar capacidade de interrupção, curva e normas. Nunca aumente o disjuntor para evitar desarmes sem investigar a causa."
+  },
+  {
+    "id": "contator", "nome": "Contator", "icone": "🧲", "categoria": "Comandos elétricos", "nivel": "Intermediário",
+    "resumo": "Dispositivo eletromecânico usado para manobrar circuitos de potência por meio de um circuito de comando.",
+    "o_que_e": "É uma chave eletromagnética com contatos principais e, conforme o modelo, contatos auxiliares.",
+    "para_que_serve": "Permite ligar e desligar cargas como motores, resistências e sistemas de iluminação por um circuito de comando.",
+    "como_funciona": "Ao energizar a bobina com a tensão apropriada, forma-se um campo magnético que movimenta a armadura e altera o estado dos contatos. Ao desenergizar, o mecanismo retorna à posição de repouso.",
+    "onde_utilizado": "Painéis de comando, partidas de motores, automação industrial e sistemas de controle.",
+    "exemplo": "Um botão de partida pode energizar a bobina do contator; os contatos principais fecham e alimentam o motor, enquanto um contato auxiliar pode realizar o selo elétrico.",
+    "cuidados": "Confira tensão e frequência da bobina, categoria de emprego, corrente da carga, quantidade de manobras e coordenação com proteção contra curto-circuito. Contator não substitui sozinho a proteção do motor."
+  },
+  {
+    "id": "rele_termico", "nome": "Relé térmico", "icone": "🌡️", "categoria": "Comandos elétricos", "nivel": "Intermediário",
+    "resumo": "Dispositivo de proteção usado principalmente para detectar sobrecargas prolongadas em motores.",
+    "o_que_e": "É um dispositivo que monitora a corrente do motor e reage ao aquecimento equivalente produzido por uma sobrecarga.",
+    "para_que_serve": "Protege o motor contra sobrecargas e, dependendo do modelo, falta de fase ou desequilíbrio, conforme especificação.",
+    "como_funciona": "A corrente aquece elementos internos. Quando a condição excede o ajuste e a classe de disparo, o mecanismo atua e muda o estado dos contatos auxiliares do circuito de comando.",
+    "onde_utilizado": "Conjuntos de partida direta e painéis de motores, normalmente associado a um contator.",
+    "exemplo": "Se o motor possui corrente nominal de placa de 7 A, o ajuste deve seguir a documentação do motor, do relé e o esquema de instalação — não um valor escolhido aleatoriamente.",
+    "cuidados": "Ajuste conforme corrente de placa e instruções do fabricante. Relé térmico não substitui proteção contra curto-circuito nem dispositivos de seccionamento."
+  },
+  {
+    "id": "temporizador", "nome": "Relé temporizador", "icone": "⏱️", "categoria": "Comandos elétricos", "nivel": "Intermediário",
+    "resumo": "Dispositivo que altera seus contatos após um intervalo de tempo definido.",
+    "o_que_e": "É um componente de comando que introduz um atraso ou uma duração programada em uma sequência elétrica.",
+    "para_que_serve": "Controla partidas sequenciais, atrasos, temporizações de iluminação, ventilação e processos automatizados.",
+    "como_funciona": "Após receber alimentação ou um sinal de disparo, inicia a contagem. Ao atingir o tempo ajustado, comuta seus contatos conforme a função selecionada, como retardo na energização ou na desenergização.",
+    "onde_utilizado": "Painéis de comando, máquinas, sistemas de bombeamento e automação.",
+    "exemplo": "Em uma sequência, um temporizador pode aguardar alguns segundos antes de permitir a energização de uma segunda etapa.",
+    "cuidados": "Verifique diagrama de ligação, tensão de alimentação, tipo de temporização e capacidade dos contatos. Use contatores intermediários quando a carga exceder a capacidade do relé."
+  },
+  {
+    "id": "multimetro", "nome": "Multímetro", "icone": "📟", "categoria": "Instrumentos de medição", "nivel": "Iniciante",
+    "resumo": "Instrumento que reúne funções de medição como tensão, corrente e resistência.",
+    "o_que_e": "É um instrumento de teste que pode medir diferentes grandezas elétricas, dependendo do modelo e da categoria de segurança.",
+    "para_que_serve": "Ajuda a verificar valores elétricos e diagnosticar circuitos, componentes e equipamentos.",
+    "como_funciona": "O instrumento mede grandezas por meio de circuitos internos. A ligação e a posição das pontas de prova mudam conforme a função selecionada.",
+    "onde_utilizado": "Bancadas de eletrônica, manutenção elétrica, instalações e painéis.",
+    "exemplo": "Para medir tensão, seleciona-se a função e a faixa corretas e conecta-se o instrumento em paralelo ao ponto de medição, seguindo o manual.",
+    "cuidados": "Nunca meça resistência em circuito energizado. Para corrente, a ligação normalmente é em série ou por alicate apropriado. Confira bornes, categoria CAT, tensão máxima e estado das pontas. Medições energizadas exigem qualificação e procedimento seguro."
+  }
+]
