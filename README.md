@@ -1,6 +1,6 @@
-# Projeto Elétrica — versão 0.1
+# Projeto Elétrica — versão 0.2
 
-Aplicativo educativo de elétrica, do iniciante ao avançado. Nome provisório.
+Biblioteca educativa de elétrica, eletrônica e automação, do iniciante ao avançado. Nome provisório.
 
 ## Publicação no Streamlit Community Cloud
 
@@ -9,17 +9,24 @@ Aplicativo educativo de elétrica, do iniciante ao avançado. Nome provisório.
 3. Clique em **Create app**.
 4. Selecione o repositório `knowix4869/projeto-eletrica`, a branch `main` e o arquivo principal `app.py`.
 5. Clique em **Deploy** e aguarde a instalação das dependências.
-6. Confirme nas configurações que o app pode ser acessado publicamente.
 
-O endereço público será informado pelo Streamlit após o deploy. Ainda não há link ativo até essa etapa ser concluída.
+Se o app já estiver publicado e conectado a este repositório, o Streamlit normalmente detecta os commits e atualiza a aplicação automaticamente. O endereço público é gerado pelo Streamlit após o deploy.
 
-## O que já funciona
+## Biblioteca atual
 
-- Página inicial e pesquisa
-- Biblioteca com filtro por categoria
-- Fichas: o que é, para que serve, como funciona, onde é usado, exemplo e cuidados
-- Quiz básico com correção
-- Interface escura responsiva
+A versão 0.2 contém **150 fichas de estudo em 30 categorias**, incluindo:
+
+- Elétrica básica e instalações elétricas
+- Proteção, manobra e comandos elétricos
+- Motores, partidas e acionamentos
+- Componentes eletrônicos e eletrônica de potência
+- Instrumentos de medição
+- Sensores, instrumentação e automação industrial
+- CLP, IHM, módulos de I/O e redes industriais
+- Pneumática, geração, energia solar e armazenamento
+- Aterramento, qualidade de energia e segurança de máquinas
+
+Cada ficha inclui: o que é, para que serve, como funciona, onde é utilizado, exemplo prático, cuidados, identificação física, terminais, símbolo em diagramas e diagnóstico inicial.
 
 ## Estrutura
 
@@ -30,11 +37,12 @@ O endereço público será informado pelo Streamlit após o deploy. Ainda não h
 
 ## Próximas evoluções
 
-- Identidade visual e nome definitivo
-- Diagramas e imagens próprios por componente
-- Conteúdo residencial, industrial e automação
-- Favoritos e progresso de estudo
-- Simuladores didáticos
-- Revisão técnica com fontes e referências normativas
+- Fotos reais e diagramas elétricos por componente
+- Esquemas de ligação e animações de funcionamento
+- Trilhas de estudo residencial, industrial e automação
+- Favoritos, progresso e testes por categoria
+- Simuladores didáticos e referências técnicas revisadas
+
+**Importante:** 150 fichas formam uma biblioteca inicial ampla, não uma lista literal de todos os componentes existentes. Terminais, símbolos e características podem variar entre fabricantes e modelos. Confirme sempre o datasheet e o diagrama do equipamento real.
 
 **Segurança:** material educativo. Não substitui treinamento, normas técnicas, análise de risco ou profissional qualificado. Não execute trabalhos em circuitos energizados com base apenas no aplicativo.
