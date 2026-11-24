@@ -38,7 +38,7 @@ with st.sidebar:
     pagina = st.radio("Navegação", paginas, index=paginas.index(st.session_state.pagina))
     st.session_state.pagina = pagina
     st.divider()
-    st.caption("Versão 0.1 • Conteúdo educativo")
+    st.caption(f"Biblioteca com {len(COMPONENTES)} conteúdos • Versão 0.2")
     st.caption("Nome provisório — pode ser alterado depois.")
 
 if pagina == "Início":
@@ -51,7 +51,7 @@ if pagina == "Início":
     """, unsafe_allow_html=True)
     query = st.text_input("🔎 O que você quer aprender?", placeholder="Ex.: disjuntor, contator, tensão, relé térmico...")
     if query:
-        encontrados = [c for c in COMPONENTES if query.lower() in (c["nome"]+" "+c["categoria"]+" "+c["resumo"]).lower()]
+        encontrados = [c for c in COMPONENTES if query.lower() in json.dumps(c, ensure_ascii=False).lower()]
         st.subheader(f"Resultados ({len(encontrados)})")
         if encontrados:
             for c in encontrados:
@@ -99,16 +99,29 @@ elif pagina == "Biblioteca":
         st.markdown(f"# {escolhido['icone']} {escolhido['nome']}")
         st.caption(f"{escolhido['categoria']} • {escolhido['nivel']}")
         st.markdown(f"<div class='panel'>{escolhido['resumo']}</div>", unsafe_allow_html=True)
+        st.markdown("### 📘 Entenda o componente")
         for titulo, chave in [
             ("O que é?", "o_que_e"), ("Para que serve?", "para_que_serve"),
-            ("Como funciona?", "como_funciona"), ("Onde é utilizado?", "onde_utilizado"),
-            ("Exemplo prático", "exemplo"), ("Cuidados importantes", "cuidados")
+            ("Como funciona internamente?", "como_funciona"), ("Onde é utilizado?", "onde_utilizado"),
+            ("Exemplo prático", "exemplo")
         ]:
-            st.markdown(f"### {titulo}")
+            st.markdown(f"#### {titulo}")
             st.write(escolhido[chave])
+        st.markdown("### 🔎 Identificação técnica")
+        for titulo, chave in [
+            ("Como identificar fisicamente", "aparencia"), ("Terminais e suas funções", "terminais"),
+            ("Símbolo em diagramas", "simbolo"), ("Defeitos e diagnóstico inicial", "diagnostico")
+        ]:
+            if escolhido.get(chave):
+                st.markdown(f"#### {titulo}")
+                st.write(escolhido[chave])
+        st.markdown("### 🦺 Cuidados importantes")
+        st.write(escolhido["cuidados"])
+        if escolhido.get("aliases"):
+            st.caption("Também conhecido como: " + ", ".join(escolhido["aliases"]))
         st.info("Conteúdo educativo. Antes de intervir em instalações ou equipamentos, desenergize, bloqueie e confirme a ausência de tensão. Serviços elétricos devem seguir as normas aplicáveis e ser executados por pessoa qualificada.")
     else:
-        st.caption(f"{len(lista)} conteúdo(s)")
+        st.caption(f"{len(lista)} conteúdo(s) encontrados em uma biblioteca de {len(COMPONENTES)} itens")
         for c in lista:
             with st.container(border=True):
                 a, b = st.columns([5, 1])
